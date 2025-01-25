@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="{{ '/' | relative_url }}">首页</a>
+            <a href="{{ '/activities' | relative_url }}">近期活动</a>
+            <a href="{{ '/recruitment' | relative_url }}">加入我们</a>
+            <a href="https://chancefoundation.com.cn/" target="_blank">天工开物基金会</a>
+            <a href="https://www.xiaoyibao.com.cn" target="_blank">小胰宝助手</a>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }} 版权所有</p>
+            <p>备案号信息</p>
+        </div>
+    </footer>
+</body>
+</html>

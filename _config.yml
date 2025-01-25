@@ -1,0 +1,39 @@
+title: 小胰宝项目
+email: your-email@example.com
+description: >-
+  小胰宝项目，由病友SamQin创立上线，现已捐助天工开物基金会，由小X宝开源社区专业团队管理。
+baseurl: ""
+url: ""
+
+# 构建设置
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 集合设置
+collections:
+  activities:
+    output: true
+    permalink: /activities/:path/
+  recruitment:
+    output: true
+    permalink: /recruitment/:path/
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "activities"
+    values:
+      layout: "activity"
+  - scope:
+      path: ""
+      type: "recruitment"
+    values:
+      layout: "recruitment"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
